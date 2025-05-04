@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.kc-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Fade-in Base */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Row 1 */
+.kc-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Row 2 - Boxes */
+.kc-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.kc-box {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px;
+  max-width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.kc-box:hover {
+  transform: translateY(-5px);
+}
+
+.kc-box i {
+  font-size: 40px;
+  color: #D96C88; /* Blossom Rose */
+  margin-bottom: 16px;
+}
+
+.kc-box h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #4C2A57; /* Deep Plum */
+}
+
+.kc-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.kc-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3AAFB9; /* Prism Teal */
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.kc-box button:hover {
+  background-color: #2a8a92;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .kc-box {
+    flex: 1 1 100%;
+  }
+}
