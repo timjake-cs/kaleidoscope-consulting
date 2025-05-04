@@ -1,0 +1,122 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+  }
+  
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Gradient Section */
+  .kc-section.gradient-section {
+    background: linear-gradient(135deg, #3AAFB9, #4C2A57);
+    color: white;
+    padding: 30px 20px;
+  }
+  
+  /* Two-column layout */
+  .kc-two-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    
+  }
+  
+  .kc-left,
+  .kc-right {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Left column text align left */
+  
+  .kc-left h3 {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 20px; /* Adds space between h3 and button */
+  }
+  
+  .kc-left {
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Right column text align right */
+  .kc-right h3 {
+    font-size: 20px;
+    margin: 0;
+    text-align: right;
+    width: 100%;
+  }
+  
+  .primary-btn {
+    padding: 12px 24px;
+    background-color: #EFCB68; /* Yellow button */
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-btn:hover {
+    background-color: #d8b85c; /* Slightly darker on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .kc-two-col {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .kc-left,
+    .kc-right {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  
+    .kc-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .kc-left h3 {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  
+    .kc-left button {
+      align-self: flex-start;
+      margin-bottom: 20px;
+    }
+  
+    .kc-right {
+      order: 3;
+    }
+  
+    .kc-right h3 {
+      text-align: left;
+      width: 100%;
+    }
+  }
+  
